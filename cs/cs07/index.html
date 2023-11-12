@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log("sesion web07");
+        console.log("ch34");
+    </script>
+</head>
+<body>
+    <h1 id="principal-title">Viernes temático de MIB</h1>
+    <button onclick="changeText()">Cambiar texto</button>
+    <button onclick="changeColorHandler('red')">Cambiar  color rojo</button>
+    <button onclick="changeColorHandler('green')">Cambiar  color verde</button>
+    <button onclick="changeColorHandler('black')">Retablecer a negro</button>
+    <br>
+    <p class="description" onclick="changeColorToWhite(this)">La diferencia entre tu y yo, que me queda bien el negro</p>
+    <p class="description" onclick="changeColorToWhite(this)">Soy team Calor</p>
+    <h5 class="description" onclick="changeColorToWhite(this)">Tremendo cuarachón se nos puso sentimental</h5>
+    <button onclick="resetText()">Retablecer los colores</button>
+
+
+    <script>
+        const refTitle = getReferenceTitle();
+
+        function changeText(){
+            console.log(refTitle);
+            console.log(typeof refTitle);
+            refTitle.innerHTML = "Me llamo <em><strong>D</strong></em>";
+        }
+        
+        function changeColorOfReference(reference, color){
+            reference.style.color = color;
+        }
+        
+        function changeColorHandler(color){
+            changeColorOfReference(refTitle,color);
+        }
+
+        function changeColorToWhite(element){
+            console.log(element);
+            changeColorOfReference(element,'white');
+        }
+
+
+        function getReferenceTitle(){
+            return document.getElementById("principal-title");
+        }
+
+        function resetText(){
+            const refText = document.getElementsByClassName('description');
+            console.log(refText);
+            for(let i = 0; i<refText.length; i++){
+                changeColorOfReference(refText[i],'black')
+            }
+        }
+
+    </script>
+</body>
+</html>
