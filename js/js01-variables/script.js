@@ -197,10 +197,12 @@ console.log(Number([3, 6, 7])); // NaN
 
 //Conversion a String()
 /*
+
 [] = ""
 [1,2] = 1,2
 function(){} = function(){}
 {} = [object Object]
+
 */
 
 
