@@ -120,15 +120,15 @@ console.log("Canciones por año: " + cancionesPesoPluma[5]); // [objetc Objetc]
 //Indicemdel objeto de numero de canciones.
 console.log("Canciones por año: " + cancionesPesoPluma[5]["2020"]); // 5
 //Mostrar el "total" de canciones de PP
-console.log("Total de canciones: ", cancionesPesoPluma[5]["total"]);
-console.log("Total de canciones: ", cancionesPesoPluma[5].total);
+console.log("Total de canciones: ", cancionesPesoPluma[5]["total"]); // 91
+console.log("Total de canciones: ", cancionesPesoPluma[5].total); // 91
 
 //Conversion de datos (casting)
 
 //Conversion implicita: 
 console.log("Hola CH " + 34);//Hola CH 34
 console.log("3"+5+6) //356
-console.log("3"*3);
+console.log("3"*3); // 9
 
 //Conversiones explicitas
 // String a number
@@ -165,7 +165,43 @@ console.log(parseInt("$333MXN".replace(/[^0-9.]/g, ''))+ 5 + 6); // 344
 console.log(parseInt('1000')); // 1000
 console.log(parseInt('1000'),2); // 1000
 
+//Conversion a String
+console.log(String(23.4)) // '23.4'
+console.log(String(true)) // true
+console.log(String([3,4,5,6])) // '23.4'
+console.log( String( {a:1,b:2} )) // [object Object]
+console.log(JSON.stringify({a:1,b:2}));
 
+//Conversion a Boolean
+/*
+Para que sea false, debe ser: "", 0, null, undefined
+*/
+console.log(Boolean("Hola")); // true
+console.log(Boolean("false")); // true
+console.log(Boolean(" ")); // true
+console.log(Boolean(undefined)); // false
+console.log(Boolean( [] )) // true
+
+//Conversion a Number
+/*
+ [] = 0;
+ [30] = 30
+ [40, 23, 45] = NaN
+ false = 0
+ true = 1
+*/
+
+console.log(Number([])); // 0
+console.log(Number([9])); // 9
+console.log(Number([3, 6, 7])); // NaN
+
+//Conversion a String()
+/*
+[] = ""
+[1,2] = 1,2
+function(){} = function(){}
+{} = [object Object]
+*/
 
 
 
