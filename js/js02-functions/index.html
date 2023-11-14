@@ -11,6 +11,24 @@
     <section class="container mt-5">
         <h2>JS 02</h2>
 
+        <div class="row g-2">
+            <div class="col-md">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInputGrid" placeholder="Cristiano" name="name"
+                  value="Escribe un Mensaje">
+                <label for="floatingInputGrid">Mensaje</label>
+              </div>
+            </div>
+            <p class="d-inline-flex gap-1">
+              <button onclick="changeName()" type="button" class="btn btn-primary active" data-bs-toggle="button"
+                aria-pressed="true">Enviar mensaje</button>
+            </p>
+          </div>
+
+          <h2 id="message"></h2>
+          <h3 id="message-2"></h3>
+          <p id="p-message"></p>
+
     </section>
     
 
