@@ -134,24 +134,30 @@ Funcion que e pasa a otra funcion como argumento, par luego invocarla para compl
 const consoleMessage = message => console.log(message);
 const alertMessage = message => alert(message);
 const printToH2 = message => {
-  const refName = document.getElementById('message');
-  refName.innerHTML = changeName(message);
+  const refH2 = document.getElementById("message");
+  refH2.innerHTML = message;
 };
 
-function changeName(){
+function setText(){
+  const refH2 = document.getElementById("message");
+  refH2.innerHTML = getText();
+}
+
+// Función que obtenga un mensaje e imprima en consola o alert o DOM o lo que se me ocurra.
+
+function getText(){
   let getName = document.getElementById('floatingInputGrid');
-  let name= getName.value;
+  const name= getName.value;
   return name;
 }
 
 
-// Función que obtenga un mensaje e imprima en consola o alert o DOM o lo que se me ocurra.
 function getMessageAndPrint( fncPrint ){
   const message = getUserMessage();
   fncPrint(message);
 }
 
-const getUserMessage = () => changeName();
+const getUserMessage = () => getText();
 
 
 getMessageAndPrint(consoleMessage);
@@ -248,12 +254,94 @@ console.log(`Cursos en común: ${ commonCoursesStudet1And2And3 }`);
 // Convertir el texto a array(split("")) y usar el metodo filter()
 
 //Mi forma
-const phrase = 'pepe pecas pica papas con un pico y una pala'
-console.log(phrase)
+const frase = 'pepe pecas pica papas con un pico y una pala'
+console.log(frase)
+const fraseArray = frase.split("");
+const arrayLetraP= fraseArray.filter((letter) => letter === 'p');
+console.log(arrayLetraP);
+const cantidadP = arrayLetraP.length;
+console.log("La cantidad de letras 'p' es:",cantidadP);
+
+//Forma de Serch
+const phrase = "pepe pecas pica papas con un pico y una pala";
 const countChar = (phrase, character) => phrase.split("").filter( element => element === character ).length;
-
 console.log( countChar( phrase, "p"));
+//Forma 2 serch
+const countChar2 = (phrase, character) => {
+  const characters = phrase.split(""); //[p,e,p,e, , p... ]
+  const filterCharacters = characters.filter(  (element, index, arr)=> element === character ); // [p..p,p]
+  return filterCharacters.length;
+}
 
 
-//
+//---------------Funciones Recursivas------------
+/*
 
+Es una técnica de programación en donde la función se llama a si misma.
+Se debe tener precausion de no entrar en un ciclo infinito.
+
+En lagunos casos, la recursividad puede ser mas legible y clara
+ya que refleja de manera directa la naturaleza recursiva del problema.
+
+
+function funcionRecursiva (valor){
+  if(condicionParo){
+
+  }else{
+    funcionRecursiva(nuevoValor); // llamada recursiva
+  }
+}
+
+*/
+
+//Realizar una funcion que calcule el factorial de un número
+// Mostrar en consola el factorial de 5
+/*
+El factorial de un número se calcula multiplicando el número por cada número que lo precede hasta el 1. Por ejemplo: 3!=3x2x1=6.
+*/
+
+function factorial (number){
+  let factorial = 1;
+  for (let i = 1; i <= number; i++) {
+    factorial *= i;
+  }
+  return factorial;
+}
+
+const factorialNumero = (number) => {
+  let factorial = number;
+  for (let i = number-1; i > 0; i--) {
+    factorial *= i;
+  }
+    return factorial;
+  
+}
+console.log(factorial(5));
+console.log(factorialNumero(5));
+
+//Solución del ejercicio con recurividad.
+function factorialRecursivo (number){
+  if(number < 1){
+    return 1;
+  }else{
+    return number* factorialRecursivo(number-1);
+  }
+}
+
+console.log(`Factorial recursivo de 5: ${factorialRecursivo(5)}`);
+
+//EJERCICIO
+
+function sumaPares (number){
+  if(number <= 0){
+    return 0;
+  }else if (number % 2 === 0 ){
+    return number + sumaPares(number-2);
+  }else{
+    return sumaPares(number-1);
+  }
+    
+}
+console.log(`Suma de pares es: ${sumaPares(22)}`);
+console.log(`Suma de pares es: ${sumaPares(12)}`);
+console.log(`Suma de pares es: ${sumaPares(7)}`);
