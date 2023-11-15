@@ -331,7 +331,19 @@ function factorialRecursivo (number){
 console.log(`Factorial recursivo de 5: ${factorialRecursivo(5)}`);
 
 //EJERCICIO
+/*
+  Calcular suma de números pares.
+  Realizar una función recursiva que sume los números pares
+  de un número determinado, hasta el número 1.
 
+  número: 12.
+  Resultado: 12 + 10 + 8 + 6 + 4 + 2 = 42
+
+  número: 7
+  Resultado: 6 + 4 + 2  = 12
+
+  Recomendación: usar módulo %2
+*/
 function sumaPares (number){
   if(number <= 0){
     return 0;
