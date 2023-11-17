@@ -252,3 +252,9 @@ do {
     console.log("Do-While " + valor ); // 4
     valor ++;
 } while ( valor < 5);
+
+/* 
+FIFO : first input, first output (primero en entrar, primero en salir) (shift, push)
+LIFO: last input, first output (ultimo en entrar, primero en salir)
+*/
+
