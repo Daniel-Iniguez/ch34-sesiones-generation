@@ -8,23 +8,65 @@
  
  Sintaxis:
     fetch(resource, options)
+   
+ La API fetch en JavaScript proporciona una interfaz para realizar 
+ solicitudes de red, como solicitudes HTTP, de manera asíncrona. 
+ Es una forma moderna y más poderosa de realizar solicitudes HTTP 
+ en comparación con métodos más antiguos, como XMLHttpRequest.
 
 */
 
-const urlFakeStore = "https://fakestoreapi.com/products";
+const urlFakeStore = "pokemones.json";
 
-const getProducts = ( url ) =>{
-    // Realizando solicitud Get
-    // .then() consume la promesa cuando sea resuelta
-    // .catch() se ejecuta en caso de que la promesa sea rechazada.
-    fetch( url )
-     .then(  (response)=>{ 
-        console.log(response);
-        return response.json(); // promesa coversión de JSON a Object
-     })
-     .then( (products) =>{
-        console.log(products);
-     } )
+const getProducts = (url) => {
+   // Realizando solicitud Get
+   // .then() consum/maneja la promesa cuando sea resuelta
+   // .catch() se ejecuta en caso de que la promesa sea rechazada.
+   fetch(url)
+      .then((response) => {
+         console.log("status code: " + response.status); // 200
+         return response.json();
+      })
+      .then(products => {
+         console.log(products);
+         imprimirEnDOM(products);
+      })
+      .catch((error) => {
+         console.log("Error en la solicitud: ");
+         console.warn(error);
+      });
+};
+
+const getProductsUsingAsyncAwait = async (url) => {
+   try{
+      const response = await fetch(url);
+      const products = response.json();
+      imprimirEnDOM(products);
+   }catch (error){
+      console.log(error);
+   }
+
 }
 
-//getProducts(urlFakeStore);
+
+getProducts(urlFakeStore);
+
+function imprimirEnDOM(products) {
+   const productsContainer = document.getElementById("products-container");
+
+   const productsTitles = products.map((product, index, array) => `
+      <article class="col-sm-6 col-lg-3">
+       <div class="card mx-auto" style="width: 15rem;">
+         <img src="${product.image}" class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title">${product.title}</h5>
+            <p class="card-text">${product.description}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+       </div>
+      </article>
+   `);
+   console.log(productsTitles);
+
+   productsContainer.innerHTML = productsTitles.join("");
+}

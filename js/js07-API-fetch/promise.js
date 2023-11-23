@@ -73,15 +73,18 @@ const greeting = (name) =>{
         }
     });
 
-    /* myPromise
+
+    myPromise
     .then( response => console.log(response) )
-    .catch( error => console.log(error)  ); */ 
+    .catch( error => console.log(error)  ); 
+
+    return myPromise;
 
 };
 
-/* greeting('Daniel');
+greeting('Daniel');
 greeting('Alan');
-greeting('Gaby'); */
+greeting('Gaby'); 
 
 //---------------- consumir las promesas con async y await-------------
 /*
@@ -102,6 +105,30 @@ const greetingAll = async () => {
     await greetingCh34('Alan');
     await greetingCh34('Geo');
     await greetingCh34('Luis');
+};
+
+/**
+ * Utilizar para cada función asíncrona un bloque try-catch.
+ * En caso de que la promesa sea rechazada, se ejecuta el
+ * código en el bloque catch(){} pero no detiene la ejecución
+ * de las otras funciones asíncronas.
+ */
+const greettingAllTryCatch = async () => {
+  try {
+    await greetingCh34("Luis");
+  } catch (error) {
+    console.log(error);
+  }
+  try {
+    await greetingCh34("Alan");
+  } catch (error) {
+    console.log(error);
+  }
+  try {
+    await greetingCh34("Geo");
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const greetingAllUsingTryCatch = async () => {
