@@ -18,9 +18,10 @@
 
 const urlFakeStore = "pokemones.json";
 
+//Usando .then .catch
 const getProducts = (url) => {
    // Realizando solicitud Get
-   // .then() consum/maneja la promesa cuando sea resuelta
+   // .then() consume/maneja la promesa cuando sea resuelta
    // .catch() se ejecuta en caso de que la promesa sea rechazada.
    fetch(url)
       .then((response) => {
@@ -37,6 +38,7 @@ const getProducts = (url) => {
       });
 };
 
+//Usando Async Await
 const getProductsUsingAsyncAwait = async (url) => {
    try{
       const response = await fetch(url);
@@ -48,8 +50,8 @@ const getProductsUsingAsyncAwait = async (url) => {
 
 }
 
-
 getProducts(urlFakeStore);
+
 
 function imprimirEnDOM(products) {
    const productsContainer = document.getElementById("products-container");

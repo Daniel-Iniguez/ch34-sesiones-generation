@@ -1,7 +1,6 @@
 console.log('JS07 - Local storage');
 
 //Leer el nombre y el job del fomrulario y enviarlo a una función.
-console.log('JS06-Formulario');
 
 // Obtener la referencia del formulario
 const userForm = document.forms['user-form']
