@@ -23,9 +23,13 @@ const getUsersUsingFetch2 = (url) => {
         fetch(url)
         .then((response) => {
             //convertirlo a objeto
-            const user = response.json();
-            console.log("GET Fetch2" ,user);
+            return response.json();
+            
         })
+        .then(data => {
+    console.log("GET Fetch2", data);
+    // Hacer algo con los datos, como mostrarlos en la página
+  })
         .catch((error) => {
             console.warn(error);
         })       
