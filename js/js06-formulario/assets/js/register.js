@@ -59,8 +59,8 @@ const mensajeError = (message) => {
 
     errorMessage.innerHTML = message;
 
-    if(message != "") errorMessageContainer.style.display = "none";
-    else errorMessageContainer.style.display = "block";
+    if(message !== "") errorMessageContainer.style.display = "none";
+    else errorMessageContainer.style.display = "block"; 
 }
 
 const enviarDatosAlServidor = (user) => {
