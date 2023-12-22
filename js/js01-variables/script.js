@@ -37,7 +37,7 @@ console.log('MAX_SAFE_INTEGER+5',Number.MAX_SAFE_INTEGER+5); // 9007199254740996
 
 //BigInt
 //Representa valores numericos enteros, de los que tipo number
-// no pueda representar(MAX_VALUE) o no es seguro (MAX_SAFE_INTEHER).
+// no pueda representar(MAX_VALUE) o no es seguro (MAX_SAFE_INTEGER).
 //Para que ea BigInt se le agrega al final la letra 'n'
 //El limite de BigInt esta determinado por la memoria disponible del sistema
 
@@ -163,14 +163,14 @@ console.log( parseInt("$333MXN".replace('$','')) + 5 + 6 ) // 344
 console.log(parseInt("$333MXN".replace(/[^0-9.]/g, ''))+ 5 + 6); // 344
 
 console.log(parseInt('1000')); // 1000
-console.log(parseInt('1000'),2); // 1000
+console.log(parseInt('1000'),2); // 1000 2
 
 //Conversion a String
 console.log(String(23.4)) // '23.4'
 console.log(String(true)) // true
-console.log(String([3,4,5,6])) // '23.4'
+console.log(String([3,4,5,6])) // '3,4,5,6'
 console.log( String( {a:1,b:2} )) // [object Object]
-console.log(JSON.stringify({a:1,b:2}));
+console.log(JSON.stringify({a:1,b:2})); //{"a":1,"b":2}
 
 //Conversion a Boolean
 /*
