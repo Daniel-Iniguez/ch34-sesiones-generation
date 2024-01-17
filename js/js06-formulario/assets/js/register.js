@@ -82,7 +82,7 @@ const enviarDatosAlServidor = async( user ) => {
 
     console.table( userPost );
     
-    const url = "https://sp3-eccomerce.onrender.com/api/v1/users";
+    const url = "https://sp3-ecommerce-oof2.onrender.com/api/v1/users";
 
     try {
         const response = await fetch( url ,{
