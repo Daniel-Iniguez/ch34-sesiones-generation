@@ -1,6 +1,6 @@
 console.log("JS09 NPM");
 
-const url = "https://fakestoreapi.com/users"
+const url = "http://localhost:8080/adoptapatas/v2/users"
 
 // ======= Peticion Get usando api Fetch, con async await, usando excepciones (try catch) =========
 const getUsersUsingFetch = async (url) => {
@@ -24,7 +24,6 @@ const getUsersUsingFetch2 = (url) => {
         .then((response) => {
             //convertirlo a objeto
             return response.json();
-
         })
         .then(data => {
             console.log("GET Fetch2", data);
@@ -39,8 +38,10 @@ getUsersUsingFetch2(url);
 // ========= Peticion Get usando api Axios =================
 const getUsersUsingAxios = async (url) => {
     try {
-        const user = await axios.get(url);
-        console.log("GET Axios", user.data);
+        const response = await axios.get(url);
+        const users = response.data;
+        console.log("GET Axios", users);
+        
 
     } catch (error) {
         console.log(error);
@@ -81,4 +82,18 @@ const postUsingFetch = async () => {
     console.log(" POST Fetch", newUser);
 }
 postUsingFetch();
+
+
+
+
+const getPosts = async () => {
+    try {
+        const response = await axios.get(`http://localhost:8080/adoptapatas/v1/posts/4`);
+        const post = response.data;
+        console.log("GET Post", post);
+    } catch (error) {
+        console.log('Error al obtener detalles del post:', error);
+    }
+};
+getPosts()
 
