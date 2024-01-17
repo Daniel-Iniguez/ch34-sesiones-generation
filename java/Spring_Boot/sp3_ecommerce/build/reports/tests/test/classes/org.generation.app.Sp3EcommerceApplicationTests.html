@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Sp3EcommerceApplicationTests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Sp3EcommerceApplicationTests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.generation.app.html">org.generation.app</a> &gt; Sp3EcommerceApplicationTests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.107s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">contextLoads()</td>
+<td class="success">2.107s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>12:44:45.669 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [org.generation.app.Sp3EcommerceApplicationTests]: Sp3EcommerceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+12:44:46.129 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration org.generation.app.Sp3EcommerceApplication for test class org.generation.app.Sp3EcommerceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.1)
+
+2024-01-17T12:44:48.012-06:00  WARN 12200 --- [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/smanu/.gradle/caches/modules-2/files-2.1/org.json/json/20231013/e22e0c040fe16f04ffdb85d851d77b07fc05ea52/json-20231013.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/smanu/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-01-17T12:44:48.068-06:00  INFO 12200 --- [    Test worker] o.g.app.Sp3EcommerceApplicationTests     : Starting Sp3EcommerceApplicationTests using Java 17.0.8 with PID 12200 (started by TuX3 in C:\generation\ch34\sesiones\java\eclipse\sp3_ecommerce)
+2024-01-17T12:44:48.072-06:00  INFO 12200 --- [    Test worker] o.g.app.Sp3EcommerceApplicationTests     : The following 1 profile is active: &quot;${PROFILE}&quot;
+2024-01-17T12:44:51.627-06:00  INFO 12200 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-01-17T12:44:51.954-06:00  INFO 12200 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 292 ms. Found 5 JPA repository interfaces.
+2024-01-17T12:44:54.479-06:00  INFO 12200 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-01-17T12:44:55.388-06:00  INFO 12200 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:f79be787-e290-4e35-a841-3e630c978567 user=SA
+2024-01-17T12:44:55.395-06:00  INFO 12200 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-01-17T12:44:55.621-06:00  INFO 12200 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-01-17T12:44:56.057-06:00  INFO 12200 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-01-17T12:44:56.265-06:00  INFO 12200 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-01-17T12:44:57.185-06:00  INFO 12200 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-01-17T12:45:00.899-06:00  INFO 12200 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-01-17T12:45:00.964-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists order_has_product cascade 
+2024-01-17T12:45:00.973-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists product_order cascade 
+2024-01-17T12:45:00.974-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists productos cascade 
+2024-01-17T12:45:00.975-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists role cascade 
+2024-01-17T12:45:00.976-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    drop table if exists usuarios cascade 
+2024-01-17T12:45:00.993-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    create table order_has_product (
+        quantity integer,
+        order_id bigint not null,
+        product_id bigint not null,
+        primary key (order_id, product_id)
+    )
+2024-01-17T12:45:01.008-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    create table product_order (
+        monto_total float(53),
+        fecha_compra timestamp(6),
+        fk_user_id bigint not null,
+        id bigint generated by default as identity,
+        primary key (id)
+    )
+2024-01-17T12:45:01.019-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    create table productos (
+        precio float(53),
+        id bigint generated by default as identity,
+        nombre varchar(70) not null,
+        primary key (id)
+    )
+2024-01-17T12:45:01.022-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    create table role (
+        id_rol bigint generated by default as identity,
+        descripcion varchar(70),
+        nombre_rol varchar(70) not null,
+        primary key (id_rol)
+    )
+2024-01-17T12:45:01.030-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    create table usuarios (
+        activo boolean,
+        fecha_nacimiento timestamp(6),
+        fk_role bigint not null,
+        id bigint generated by default as identity,
+        apellido varchar(70) not null,
+        nombre varchar(70) not null,
+        email varchar(100) not null unique,
+        password varchar(150) not null,
+        primary key (id)
+    )
+2024-01-17T12:45:01.038-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists order_has_product 
+       add constraint FKb2ameb29ljo9v6lio7hfyb78e 
+       foreign key (order_id) 
+       references product_order
+2024-01-17T12:45:01.077-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists order_has_product 
+       add constraint FKihkcew7yf7k4lfrbyyuu1ma6p 
+       foreign key (product_id) 
+       references productos
+2024-01-17T12:45:01.082-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists product_order 
+       add constraint FK1lyaxdk4dopw38wma862eytrq 
+       foreign key (fk_user_id) 
+       references usuarios
+2024-01-17T12:45:01.088-06:00 DEBUG 12200 --- [    Test worker] org.hibernate.SQL                        : 
+    alter table if exists usuarios 
+       add constraint FKlf6uycoq9td3bgl4lj8rpajma 
+       foreign key (fk_role) 
+       references role
+2024-01-17T12:45:01.110-06:00  INFO 12200 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-01-17T12:45:03.186-06:00  WARN 12200 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-01-17T12:45:03.761-06:00  INFO 12200 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2024-01-17T12:45:05.091-06:00  INFO 12200 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@702e21c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c450960, org.springframework.security.web.context.SecurityContextHolderFilter@5ab1107d, org.springframework.security.web.header.HeaderWriterFilter@60660d21, org.springframework.web.filter.CorsFilter@7c5fbde4, org.springframework.security.web.authentication.logout.LogoutFilter@6441cff1, org.generation.app.security.jwt.JWTAuthorizationFilter@30f99ca1, org.generation.app.security.jwt.JWTAuthenticationFilter@7021bb55, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@42e32feb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3aebdb4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4fd70118, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6023b54f, org.springframework.security.web.session.SessionManagementFilter@ec67be1, org.springframework.security.web.access.ExceptionTranslationFilter@2b71a12e, org.springframework.security.web.access.intercept.AuthorizationFilter@73543048]
+2024-01-17T12:45:06.604-06:00  INFO 12200 --- [    Test worker] o.g.app.Sp3EcommerceApplicationTests     : Started Sp3EcommerceApplicationTests in 19.691 seconds (process running for 24.513)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.5</a> at 17 ene. 2024 12:45:09</p>
+</div>
+</div>
+</body>
+</html>
